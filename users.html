@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Manage users in the enterprise dashboard">
+
+    <title>Users - Enterprise Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div>
+            <h1>Enterprise Dashboard</h1>
+            <p>Simple and accessible business dashboard</p>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav aria-label="Main navigation">
+
+            <ul>
+                <li>
+                    <a href="index.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="users.html" aria-current="page">
+                        Users
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        Settings
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Layout -->
+    <div class="page-layout">
+
+        <!-- Sidebar -->
+        <aside aria-label="Sidebar navigation">
+
+            <h2>Quick Links</h2>
+
+            <nav aria-label="Sidebar menu">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="users.html">
+                            Manage Users
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reports.html">
+                            View Reports
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">
+                            Settings
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Page Introduction -->
+            <section aria-labelledby="users-page-heading">
+
+                <h2 id="users-page-heading">
+                    User Management
+                </h2>
+
+                <p>
+                    View and manage registered users in the system.
+                </p>
+
+            </section>
+
+
+            <!-- Users Table -->
+            <section aria-labelledby="users-table-heading">
+
+                <h2 id="users-table-heading">
+                    All Users
+                </h2>
+
+                <table>
+
+                    <caption>
+                        List of registered users
+                    </caption>
+
+                    <thead>
+
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Rahul Sharma</td>
+                            <td>rahul@example.com</td>
+                            <td>Manager</td>
+                            <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>Aman Verma</td>
+                            <td>aman@example.com</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>Priya Singh</td>
+                            <td>priya@example.com</td>
+                            <td>Employee</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>Neha Joshi</td>
+                            <td>neha@example.com</td>
+                            <td>Manager</td>
+                            <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>Rohit Kumar</td>
+                            <td>rohit@example.com</td>
+                            <td>Employee</td>
+                            <td>Inactive</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <!-- Add User Form -->
+            <section aria-labelledby="add-user-heading">
+
+                <h2 id="add-user-heading">
+                    Add New User
+                </h2>
+
+                <form>
+
+                    <fieldset>
+
+                        <legend>
+                            User Information
+                        </legend>
+
+
+                        <!-- Name -->
+                        <div>
+                            <label for="full-name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="full-name"
+                                name="full-name"
+                                autocomplete="name"
+                                required
+                                minlength="2"
+                                placeholder="Enter full name">
+                        </div>
+
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                placeholder="Enter email address">
+                        </div>
+
+
+                        <!-- Role -->
+                        <div>
+                            <label for="role">
+                                User Role
+                            </label>
+
+                            <select
+                                id="role"
+                                name="role"
+                                required>
+
+                                <option value="">
+                                    Select a role
+                                </option>
+
+                                <option value="manager">
+                                    Manager
+                                </option>
+
+                                <option value="employee">
+                                    Employee
+                                </option>
+
+                            </select>
+                        </div>
+
+
+                        <!-- Status -->
+                        <div>
+
+                            <fieldset>
+
+                                <legend>
+                                    Account Status
+                                </legend>
+
+                                <div>
+                                    <input
+                                        type="radio"
+                                        id="active"
+                                        name="status"
+                                        value="active"
+                                        required>
+
+                                    <label for="active">
+                                        Active
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input
+                                        type="radio"
+                                        id="inactive"
+                                        name="status"
+                                        value="inactive">
+
+                                    <label for="inactive">
+                                        Inactive
+                                    </label>
+                                </div>
+
+                            </fieldset>
+
+                        </div>
+
+
+                        <!-- Submit -->
+                        <button type="submit">
+                            Add User
+                        </button>
+
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Enterprise Dashboard.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
